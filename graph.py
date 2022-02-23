@@ -20,14 +20,14 @@ def graph_1data(x_data, y_data, labelname):
     plt.rcParams["font.size"] = 14
     plt.rcParams["axes.linewidth"] = 1.5
 
-    plt.plot(x_data, y_data, c="red", label=labelname)
+    plt.plot(x_data, y_data, c="darkorange", label=labelname)
     np.linspace(min(x_data), max(x_data), 100)
-    plt.ylim(-1.55, 1.55)
+    # plt.ylim(-1.55, 1.55)
     # plt.ylim(min(y_data), max(y_data))
-    plt.xlabel("Acceleration", fontname = 'Times New Roman')
-    plt.ylabel("Torque", fontname = 'Times New Roman')
+    plt.xlabel("Time[sec]", fontname = 'Times New Roman')
+    plt.ylabel("Force[N]", fontname = 'Times New Roman')
     plt.legend()
-    plt.savefig('NNresult.png') #PNGファイル生成
+    # plt.savefig('NNresult.png') #PNGファイル生成
     plt.show()
 
 
@@ -41,13 +41,13 @@ def graph_2data(x_data, y1_data, y2_data, labelname1, labelname2):
     plt.rcParams["font.size"] = 14
     plt.rcParams["axes.linewidth"] = 1.5
     
-    plt.plot(x_data, y1_data, c="red", label=labelname1)
+    plt.plot(x_data, y1_data, c="darkorange", label=labelname1)
     plt.plot(x_data, y2_data, c="blue", label=labelname2)
     np.linspace(min(x_data), max(x_data), 100)
-    plt.ylim(-1.55, 1.55)
+    # plt.ylim(-0.01, 0.01)
     # plt.ylim(min(y_data), max(y_data))
     plt.xlabel("Time[sec]", fontname = 'Times New Roman')
-    plt.ylabel("Learning Result", fontname = 'Times New Roman')
+    plt.ylabel("Force[N]", fontname = 'Times New Roman')
     plt.legend()
-    plt.savefig('NNresult.png') #PNGファイル生成
+    # plt.savefig('NNresult.png') #PNGファイル生成
     plt.show()
