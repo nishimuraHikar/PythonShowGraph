@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from scipy.stats import norm
 
 def ReadColumn(csv, line_num): #csvと列番号を指定
     #csvからndarray型に変換
@@ -91,21 +90,4 @@ def multiplot_2and1(x_data, y_data1a, y_data1b, y_data2a, y_data2b, labelname1, 
 
     plt.tight_layout()
     plt.savefig("result.pdf")
-    plt.show()
-
-# ヒストグラム
-def histgram(data, binsnum, scale):
-    plt.rcParams['font.family'] = 'Times New Roman'
-    plt.rcParams["xtick.direction"] = "in"
-    plt.rcParams["ytick.direction"] = "in"
-    plt.rcParams["xtick.major.width"] = 1.5
-    plt.rcParams["ytick.major.width"] = 1.5
-    plt.rcParams["font.size"] = 16
-    plt.rcParams["axes.linewidth"] = 1.5
-    fig = plt.figure(figsize = [5,5])
-    ax = fig.add_subplot(111)
-    ax.hist(data, bins = binsnum, density = True)
-    X = np.linspace(-0.1, 0.1, 50)
-    Y = norm.pdf(X, loc=0, scale=scale)
-    ax.plot(X, Y, c="red")
     plt.show()
