@@ -90,3 +90,7 @@ def multiplot_2and1(x_data, y_data1a, y_data1b, y_data2a, y_data2b, labelname1, 
 
     plt.tight_layout()
     plt.show()
+# =======
+#     # plt.savefig('NNresult.png') #PNGファイル生成
+# >>>>>>> b9eaac676acfc1c66dcc4038d5f1e117d2488184
+#     plt.show()
