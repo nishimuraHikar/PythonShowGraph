@@ -88,8 +88,5 @@ def multiplot_2and1(x_data, y_data1a, y_data1b, y_data2a, y_data2b, labelname1, 
     plt.legend(loc = 'upper left')
 
     plt.tight_layout()
-<<<<<<< HEAD
     plt.savefig("false.pdf")
-=======
->>>>>>> e0da83cdaacd523a1097aa5e215b103dc6c94790
     plt.show()
