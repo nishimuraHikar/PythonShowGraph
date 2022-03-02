@@ -49,9 +49,9 @@ def graph_2data(x_data, y1_data, y2_data, labelname1, labelname2):
     plt.xlabel("Time[sec]", fontname = 'Times New Roman')
     plt.ylabel("Force[N]", fontname = 'Times New Roman')
     plt.legend()
-<<<<<<< HEAD
-    plt.savefig('NNresult.png') #PNGファイル生成
-    plt.show()
+# <<<<<<< HEAD
+#     plt.savefig('NNresult.png') #PNGファイル生成
+#     plt.show()
 
 # マルチプロット2行1列
 def multiplot_2and1(x_data, y_data1a, y_data1b, y_data2a, y_data2b, labelname1, labelname2, labelname3, labelname4):
@@ -89,7 +89,8 @@ def multiplot_2and1(x_data, y_data1a, y_data1b, y_data2a, y_data2b, labelname1, 
     plt.legend(loc = 'upper left')
 
     plt.tight_layout()
-=======
-    # plt.savefig('NNresult.png') #PNGファイル生成
->>>>>>> b9eaac676acfc1c66dcc4038d5f1e117d2488184
     plt.show()
+# =======
+#     # plt.savefig('NNresult.png') #PNGファイル生成
+# >>>>>>> b9eaac676acfc1c66dcc4038d5f1e117d2488184
+#     plt.show()
