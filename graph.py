@@ -50,7 +50,6 @@ def graph_2data(x_data, y1_data, y2_data, labelname1, labelname2):
     plt.xlabel("Time[sec]", fontname = 'Times New Roman')
     plt.ylabel("Force[N]", fontname = 'Times New Roman')
     plt.legend()
-# <<<<<<< HEAD
 #     plt.savefig('NNresult.png') #PNGファイル生成
 #     plt.show()
 
@@ -71,22 +70,22 @@ def multiplot_2and1(x_data, y_data1a, y_data1b, y_data2a, y_data2b, labelname1, 
     plt.subplot(211)
     plt.plot(x_data, y_data1a, c="darkorange", label=labelname1)
     plt.plot(x_data, y_data1b, c="blue", label=labelname2)
-    plt.ylabel("Force[N]", fontname = 'Times New Roman')
+    plt.ylabel("Force X[N]", fontname = 'Times New Roman')
     plt.xlim(0, 60)
-    plt.ylim(-0.1, 0.2)
-    plt.axvspan(40, 60, color="gray", alpha=0.3)
+    plt.ylim(-0.08, 0.1)
+    # plt.axvspan(40, 60, color="gray", alpha=0.3)
     plt.legend(loc = 'upper left')
 
     plt.subplot(212)
     plt.plot(x_data, y_data2a, c="darkorange", label=labelname3)
     plt.plot(x_data, y_data2b, c="blue", label=labelname4)
-    plt.ylabel("Force[N]", fontname = 'Times New Roman')
+    plt.ylabel("Force Y[N]", fontname = 'Times New Roman')
     plt.xlim(0, 60)
-    plt.ylim(-0.1, 0.2)
+    plt.ylim(-0.08, 0.1)
 
     np.linspace(min(x_data), max(x_data), 100)
     plt.xlabel("Time[sec]", fontname = 'Times New Roman')
-    plt.axvspan(40, 60, color="gray", alpha=0.3)
+    # plt.axvspan(40, 60, color="gray", alpha=0.3)
     plt.legend(loc = 'upper left')
 
     plt.tight_layout()
@@ -108,4 +107,6 @@ def histgram(data, binsnum, scale):
     X = np.linspace(-0.1, 0.1, 50)
     Y = norm.pdf(X, loc=0, scale=scale)
     ax.plot(X, Y, c="red")
-    plt.show()
+
+    # plt.savefig("false.pdf")
+    # plt.show()
