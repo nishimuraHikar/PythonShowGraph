@@ -8,7 +8,6 @@ predictdatax = graph.ReadColumn(datafile, 2)
 inputdatay = graph.ReadColumn(datafile, 3)
 predictdatay = graph.ReadColumn(datafile, 4)
 
-
 graph.multiplot_2and1(timedata,
                       inputdatax, predictdatax,
                       inputdatay, predictdatay,
