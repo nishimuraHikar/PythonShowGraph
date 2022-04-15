@@ -64,26 +64,29 @@ def multiplot_2and1(x_data,
     plt.rcParams["ytick.major.width"] = 1.5
     plt.rcParams["font.size"] = 16
     plt.rcParams["axes.linewidth"] = 1.5
-    plt.figure(figsize=[9, 7])
+    plt.figure(figsize=[10, 8])
 
     plt.subplot(211)
     plt.plot(x_data, y_data1a, c="darkorange", label=labelname1)
     plt.plot(x_data, y_data1b, c="blue", label=labelname2)
+    # plt.xlabel("subject1", fontname = 'Times New Roman')
     plt.ylabel("Force[N]", fontname = 'Times New Roman')
     plt.xlim(0, 60)
     plt.ylim(-ylim, ylim)
     plt.axvspan(backdroung_start, background_end, color="gray", alpha=0.3)
-    plt.legend(loc = 'upper left')
+    # plt.legend(loc = 'upper left', bbox_to_anchor = (0.5, 1.0), borderaxespad=0, ncol=2)
+    plt.legend(loc='upper center', bbox_to_anchor=(0.21, 1.0), borderaxespad=0, ncol=2)
 
     plt.subplot(212)
     plt.plot(x_data, y_data2a, c="darkorange", label=labelname3)
     plt.plot(x_data, y_data2b, c="blue", label=labelname4)
+    # plt.xlabel("subject2", fontname='Times New Roman')
     plt.ylabel("Force[N]", fontname = 'Times New Roman')
     plt.xlim(0, 60)
     plt.ylim(-ylim, ylim)
     plt.axvspan(backdroung_start, background_end, color="gray", alpha=0.3)
     # plt.yticks(np.arange(-ylim, ylim, ystep))
-    plt.legend(loc = 'upper left')
+    plt.legend(loc='upper center', bbox_to_anchor=(0.21, 1.0), borderaxespad=0, ncol=2)
 
     np.linspace(min(x_data), max(x_data), 100)
     plt.xlabel("Time[sec]", fontname = 'Times New Roman')
