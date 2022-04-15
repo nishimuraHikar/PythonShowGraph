@@ -1,6 +1,6 @@
 import graph
 
-datafile = 'csv/predictdata.csv'
+datafile = 'csv/predict_kotaro.csv'
 
 timedata = graph.ReadColumn(datafile, 0)
 inputdatax = graph.ReadColumn(datafile, 1)
