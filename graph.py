@@ -10,6 +10,13 @@ def ReadColumn(csv, line_num): #csvと列番号を指定
     array = csvdata.values
     return array
 
+# 使う行を選択
+def MeticulousReadColum(csv, line_num, StartLine, EndLine):
+    csvdata = pd.read_csv(csv, header=0, usecols=[line_num])
+    SpecificLine = csvdata.loc[StartLine:EndLine]
+    array = SpecificLine.values
+    return array
+
 ## 1つのグラフ
 def graph_1data(x_data, y_data, ylim, labelname):
     plt.rcParams['font.family'] = 'Times New Roman'
